@@ -2,7 +2,6 @@ services:
 - type: web
   name: artalk-go
   env: docker
-  disk:
-    name: artalk-go
-    mountPath: /data
-    sizeGB: 10
+  envVars:
+    - key: PORT
+      value: 23366
