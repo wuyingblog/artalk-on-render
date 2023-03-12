@@ -15,15 +15,24 @@ timezone: "Asia/Shanghai"
 
 # 数据库
 db:
-  type: "pgsql" # 支持 sqlite, mysql, pgsql, mssql
-  # file: "/data/artalk-go.db" # sqlite 数据库文件
-  name: "artalk"     # 数据库名
-  host: "dpg-caqijvv5f99e8ku79c40-a"  # 地址
-  port: "5432"       # 端口
-  user: "artalk"       # 账号
-  password: "AYTvYPGIf9W2bslJD8UwP3JVduu1ZosM"       # 密码
-  charset: "utf8mb4" # 编码格式
-  table_prefix: ""   # 表前缀 (例如："atk_")
+  # 数据库类型 ["sqlite", "mysql", "pgsql", "mssql"]
+  type: "sqlite"
+  # 数据库文件 (仅 SQLite 数据库需填写)
+  file: "./data/artalk-go.db"
+  # 数据库名称
+  name: "artalk"
+  # 数据库地址
+  host: "localhost"
+  # 数据库端口
+  port: 3306
+  # 数据库账户
+  user: "root"
+  # 数据库密码
+  password: ""
+  # 编码格式
+  charset: "utf8mb4"
+  # 表前缀 (例如："atk_")
+  table_prefix: ""
 
 # 日志
 log:
